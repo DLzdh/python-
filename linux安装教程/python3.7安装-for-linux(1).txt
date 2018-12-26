@@ -1,0 +1,55 @@
+安装pyhton3.7 的依赖包
+
+sudo yum -y groupinstall "Development tools"
+
+sudo yum -y install zlib-devel bzip2-devel openssl-devel ncurses-devel sqlite-devel readline-devel tk-devel gdbm-devel db4-devel libpcap-devel xz-devel libffi-devel
+
+下载python3.7的“源码”：
+
+wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tar.xz
+
+解压并编译安装：
+
+tar -xJvf Python-3.7.0.tar.xz
+
+cd Python-3.7.0
+
+./configure --prefix=/usr/local/python3  --enable-shared
+make && make install
+
+配置环境变量：
+
+cd /usr/local/python3/bin/
+
+ln -s /usr/local/python3/bin/python3 /usr/bin/python3
+ln -s /usr/local/python3/bin/pip3 /usr/bin/pip
+	
+
+
+将编译目录下的libpython3.7m.so.1.0文件复制到
+
+/usr/lib/libpython3.7m.so.1.0
+/usr/local/lib/libpython3.7m.so.1.0
+/usr/local/python3/lib/libpython3.7m.so.1.0
+/usr/local/lib64/libpython3.7m.so.1.0
+/usr/lib64/libpython3.7m.so.1.0
+
+注：我不太清楚具体放到哪个文件下，没有试验，所以把lib文件全都放了一下，有时间可以具体确认
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

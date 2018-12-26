@@ -1,0 +1,521 @@
+#可将以下的直接复制粘贴到谷歌的C:\Users\ZDH\AppData\Local\Google\Chrome\User Data\Default\Bookmarks  这个文件中：
+{
+   "checksum": "3fdc40873f81b891d7657327d1624674",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13178683010678168",
+            "id": "10",
+            "meta_info": {
+               "last_visited_desktop": "13185286097228976"
+            },
+            "name": "Linux 系统目录结构 | 菜鸟教程",
+            "type": "url",
+            "url": "http://www.runoob.com/linux/linux-system-contents.html"
+         }, {
+            "children": [ {
+               "date_added": "13178700776378151",
+               "id": "12",
+               "meta_info": {
+                  "last_visited_desktop": "13190199181809125"
+               },
+               "name": "百度脑图－便捷的思维工具",
+               "type": "url",
+               "url": "http://naotu.baidu.com/home"
+            }, {
+               "date_added": "13178509643035487",
+               "id": "5",
+               "meta_info": {
+                  "last_visited_desktop": "13190299003404661"
+               },
+               "name": "百度一下，你就知道",
+               "type": "url",
+               "url": "https://www.baidu.com/"
+            }, {
+               "date_added": "13181182272413599",
+               "id": "44",
+               "meta_info": {
+                  "last_visited_desktop": "13189348399172430"
+               },
+               "name": "IntelliJ IDEA 注册码",
+               "type": "url",
+               "url": "http://idea.lanyus.com/"
+            }, {
+               "date_added": "13181212614681657",
+               "id": "46",
+               "meta_info": {
+                  "last_visited_desktop": "13188062339007993"
+               },
+               "name": "【高清小文艺图片背景图片】_高清小文艺图片高清背景素材下载_千库网",
+               "type": "url",
+               "url": "http://588ku.com/tuku/gaoqingxiaowenyitupian.html"
+            }, {
+               "date_added": "13181813119761946",
+               "id": "51",
+               "meta_info": {
+                  "last_visited_desktop": "13184248238680634"
+               },
+               "name": "高中数学知识点总结(最全版)_百度文库",
+               "type": "url",
+               "url": "https://wenku.baidu.com/view/fb48a52ff011f18583d049649b6648d7c0c7085b.html"
+            }, {
+               "date_added": "13182511030498737",
+               "id": "59",
+               "meta_info": {
+                  "last_visited_desktop": "13187939022049875"
+               },
+               "name": "我的首页 微博-随时随地发现新鲜事",
+               "type": "url",
+               "url": "https://weibo.com/u/6508527816/home?wvr=5&sudaref=graph.qq.com"
+            }, {
+               "date_added": "13183440131286818",
+               "id": "65",
+               "meta_info": {
+                  "last_visited_desktop": "13186825258904404"
+               },
+               "name": "百度地图",
+               "type": "url",
+               "url": "https://map.baidu.com/"
+            }, {
+               "date_added": "13184219802798960",
+               "id": "71",
+               "meta_info": {
+                  "last_visited_desktop": "13187435600981248"
+               },
+               "name": "(1 封私信)首页 - 知乎",
+               "type": "url",
+               "url": "https://www.zhihu.com/"
+            }, {
+               "date_added": "13185515265053796",
+               "id": "83",
+               "meta_info": {
+                  "last_visited_desktop": "13185515265062492"
+               },
+               "name": "百度脑图－便捷的思维工具",
+               "type": "url",
+               "url": "http://naotu.baidu.com/file/ad4c9e8c5e597ce323b5197642580416?token=af2f613544c5db37"
+            }, {
+               "date_added": "13186462886774792",
+               "id": "88",
+               "meta_info": {
+                  "last_visited_desktop": "13189480428184185"
+               },
+               "name": "北京教育考试院-综合查询系统",
+               "type": "url",
+               "url": "http://query.bjeea.cn/queryService/rest/admission/111"
+            }, {
+               "date_added": "13187411868415013",
+               "id": "94",
+               "meta_info": {
+                  "last_visited_desktop": "13189564344574165"
+               },
+               "name": "513507287@qq.com的共享文件 - 城通网盘-50TB超大网盘",
+               "type": "url",
+               "url": "https://u15361672.ctfile.com/u/15361672/24667249"
+            }, {
+               "date_added": "13189046964627983",
+               "id": "100",
+               "meta_info": {
+                  "last_visited_desktop": "13189564543085523"
+               },
+               "name": "PDF电子杂志资源分享区众乐Kindle电子书论坛 - Powered by Discuz!",
+               "type": "url",
+               "url": "http://www.zhonglezazhi.com/forum.php?mod=forumdisplay&fid=66"
+            }, {
+               "date_added": "13189486534472760",
+               "id": "102",
+               "meta_info": {
+                  "last_visited_desktop": "13190084019926082"
+               },
+               "name": "今日头条",
+               "type": "url",
+               "url": "https://www.toutiao.com/ch/news_tech/"
+            } ],
+            "date_added": "13178700870672416",
+            "date_modified": "13189611569160693",
+            "id": "13",
+            "name": "百度",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13179829864687631",
+               "id": "22",
+               "meta_info": {
+                  "last_visited_desktop": "13190136038222258"
+               },
+               "name": "Python 正则表达式 | 菜鸟教程",
+               "type": "url",
+               "url": "http://www.runoob.com/python/python-reg-expressions.html"
+            }, {
+               "date_added": "13180688573361294",
+               "id": "41",
+               "meta_info": {
+                  "last_visited_desktop": "13180688573361486"
+               },
+               "name": "PYTHON3中 类的继承 - C3的脚印 - 博客园",
+               "type": "url",
+               "url": "https://www.cnblogs.com/lx3822/p/8808845.html"
+            } ],
+            "date_added": "13179569243936569",
+            "date_modified": "13181381958910548",
+            "id": "20",
+            "name": "python",
+            "type": "folder"
+         }, {
+            "date_added": "13178509807499550",
+            "id": "6",
+            "meta_info": {
+               "last_visited_desktop": "13189227324815359"
+            },
+            "name": "动态 - 渡朗 (LT_zdh) - 码云 Gitee.com",
+            "type": "url",
+            "url": "https://gitee.com/LT_zdh/events"
+         }, {
+            "children": [ {
+               "date_added": "13180065458276297",
+               "id": "30",
+               "meta_info": {
+                  "last_visited_desktop": "13180330635269704"
+               },
+               "name": "python写一个简单的12306抢票 - CSDN博客",
+               "type": "url",
+               "url": "https://blog.csdn.net/qqtMJK/article/details/79375324#comments"
+            }, {
+               "date_added": "13179569172378338",
+               "id": "17",
+               "meta_info": {
+                  "last_visited_desktop": "13181100869061968"
+               },
+               "name": "快速上手 — Requests 2.18.1 文档",
+               "type": "url",
+               "url": "http://docs.python-requests.org/zh_CN/latest/user/quickstart.html"
+            }, {
+               "date_added": "13179569181946928",
+               "id": "18",
+               "meta_info": {
+                  "last_visited_desktop": "13180760943520317"
+               },
+               "name": "Scrapy教程 - Scrapy 1.5.1文档",
+               "type": "url",
+               "url": "https://docs.scrapy.org/en/latest/intro/tutorial.html"
+            }, {
+               "date_added": "13180006617264321",
+               "id": "27",
+               "meta_info": {
+                  "last_visited_desktop": "13180329036329506"
+               },
+               "name": "关于反爬虫，看这一篇就够了 - 携程技术中心 - SegmentFault 思否",
+               "type": "url",
+               "url": "https://segmentfault.com/a/1190000005840672"
+            }, {
+               "date_added": "13180006660576094",
+               "id": "28",
+               "meta_info": {
+                  "last_visited_desktop": "13180415892898739"
+               },
+               "name": "python3 requests 12306下单环节 - CSDN博客",
+               "type": "url",
+               "url": "https://blog.csdn.net/nonoroya_zoro/article/details/80108722"
+            }, {
+               "date_added": "13180093988553087",
+               "id": "32",
+               "meta_info": {
+                  "last_visited_desktop": "13180168780177566"
+               },
+               "name": "马靖恺的博客 - 第 1 页 - CSDN博客",
+               "type": "url",
+               "url": "https://blog.csdn.net/qqtMJK"
+            }, {
+               "date_added": "13180168794392989",
+               "id": "34",
+               "meta_info": {
+                  "last_visited_desktop": "13180415897072800"
+               },
+               "name": "python写一个简单的12306抢票 - CSDN博客",
+               "type": "url",
+               "url": "https://blog.csdn.net/qqtMJK/article/details/79375324"
+            }, {
+               "date_added": "13180503152771207",
+               "id": "38",
+               "meta_info": {
+                  "last_visited_desktop": "13188294084565611"
+               },
+               "name": "国内高匿免费HTTP代理IP__第1页国内高匿",
+               "type": "url",
+               "url": "http://www.xicidaili.com/nn"
+            }, {
+               "date_added": "13188464440678622",
+               "id": "96",
+               "meta_info": {
+                  "last_visited_desktop": "13188532736647556"
+               },
+               "name": "Beautiful Soup 4.2.0 文档 — Beautiful Soup 4.2.0 documentation",
+               "type": "url",
+               "url": "https://www.crummy.com/software/BeautifulSoup/bs4/doc.zh/"
+            } ],
+            "date_added": "13180065478967949",
+            "date_modified": "13188624615415745",
+            "id": "31",
+            "name": "爬虫",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13178855363898229",
+               "id": "15",
+               "meta_info": {
+                  "last_visited_desktop": "13185879199564954"
+               },
+               "name": "基本信息 - Django_1.11.6",
+               "type": "url",
+               "url": "https://yiyibooks.cn/information/xx/Django_1.11.6/"
+            }, {
+               "date_added": "13178519532960022",
+               "id": "8",
+               "meta_info": {
+                  "last_visited_desktop": "13185854460676542"
+               },
+               "name": "Django 文档 | Django documentation | Django",
+               "type": "url",
+               "url": "https://docs.djangoproject.com/zh-hans/2.1/"
+            } ],
+            "date_added": "13180526282692530",
+            "date_modified": "13180688573361294",
+            "id": "39",
+            "name": "django",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13180691789596473",
+               "id": "42",
+               "meta_info": {
+                  "last_visited_desktop": "13189132515316056"
+               },
+               "name": "全局 CSS 样式 · Bootstrap v3 中文文档",
+               "type": "url",
+               "url": "https://v3.bootcss.com/css/"
+            }, {
+               "date_added": "13181381938590660",
+               "id": "48",
+               "meta_info": {
+                  "last_visited_desktop": "13188188236972867"
+               },
+               "name": "HTML \u003Caudio> preload 属性",
+               "type": "url",
+               "url": "http://www.w3school.com.cn/tags/att_audio_preload.asp"
+            } ],
+            "date_added": "13181381974549514",
+            "date_modified": "13181813119761946",
+            "id": "49",
+            "name": "H5",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13182480483175582",
+               "id": "53",
+               "meta_info": {
+                  "last_visited_desktop": "13188914049487707"
+               },
+               "name": "谁说菜鸟不会数据分析.pdf",
+               "type": "url",
+               "url": "file:///C:/Users/ZDH/Desktop/python/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/%E8%B0%81%E8%AF%B4%E8%8F%9C%E9%B8%9F%E4%B8%8D%E4%BC%9A%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90.pdf"
+            }, {
+               "date_added": "13182480514003263",
+               "id": "55",
+               "meta_info": {
+                  "last_visited_desktop": "13185420289407495"
+               },
+               "name": "机器学习三剑客之Numpy - 简书",
+               "type": "url",
+               "url": "https://www.jianshu.com/p/83c8ef18a1e8"
+            }, {
+               "date_added": "13182505070602534",
+               "id": "57",
+               "meta_info": {
+                  "last_visited_desktop": "13187093350976717"
+               },
+               "name": "GitHub Pages | Websites for you and your projects, hosted directly from your GitHub repository. Just edit, push, and your changes are live.",
+               "type": "url",
+               "url": "https://pages.github.com/"
+            }, {
+               "date_added": "13182505970641545",
+               "id": "58",
+               "meta_info": {
+                  "last_visited_desktop": "13190129683486907"
+               },
+               "name": "GitHub上",
+               "type": "url",
+               "url": "https://github.com/"
+            }, {
+               "date_added": "13184301570842041",
+               "id": "73",
+               "meta_info": {
+                  "last_visited_desktop": "13190178640472396"
+               },
+               "name": "教程 - 熊猫0.23.4文档",
+               "type": "url",
+               "url": "http://pandas.pydata.org/pandas-docs/stable/tutorials.html"
+            }, {
+               "date_added": "13184414832720599",
+               "id": "75",
+               "meta_info": {
+                  "last_visited_desktop": "13185271571700684"
+               },
+               "name": "python pandas中series与dataframe数据类型属性及操作基础 - 三石 - CSDN博客",
+               "type": "url",
+               "url": "https://blog.csdn.net/ly_ysys629/article/details/54944153"
+            }, {
+               "date_added": "13184726512482217",
+               "id": "77",
+               "meta_info": {
+                  "last_visited_desktop": "13188994025787416"
+               },
+               "name": "2. pandas入门 — Python For Data Analysis 0.1 documentation",
+               "type": "url",
+               "url": "https://pda.readthedocs.io/en/latest/chp5.html"
+            }, {
+               "date_added": "13185337148193114",
+               "id": "81",
+               "meta_info": {
+                  "last_visited_desktop": "13189176309606410"
+               },
+               "name": "numpy.identity — NumPy v1.15 Manual",
+               "type": "url",
+               "url": "https://docs.scipy.org/doc/numpy/reference/generated/numpy.identity.html"
+            }, {
+               "date_added": "13185599175488895",
+               "id": "85",
+               "meta_info": {
+                  "last_visited_desktop": "13190260018123220"
+               },
+               "name": "题库 - 领扣 (LeetCode)",
+               "type": "url",
+               "url": "https://leetcode-cn.com/problemset/all/"
+            }, {
+               "date_added": "13185599709564989",
+               "id": "86",
+               "meta_info": {
+                  "last_visited_desktop": "13189830657421521"
+               },
+               "name": "10 Minutes to pandas — pandas 0.23.4 documentation",
+               "type": "url",
+               "url": "http://pandas.pydata.org/pandas-docs/stable/10min.html#min"
+            }, {
+               "date_added": "13186631870883137",
+               "id": "90",
+               "meta_info": {
+                  "last_visited_desktop": "13190266422592003"
+               },
+               "name": "用户指南 - Matplotlib 3.0.2文档",
+               "type": "url",
+               "url": "https://matplotlib.org/users/"
+            }, {
+               "date_added": "13187062575983169",
+               "id": "92",
+               "meta_info": {
+                  "last_visited_desktop": "13187064504629391"
+               },
+               "name": "【u014539580】博客 - CSDN",
+               "type": "url",
+               "url": "https://me.csdn.net/u014539580"
+            }, {
+               "date_added": "13188624615415745",
+               "id": "98",
+               "meta_info": {
+                  "last_visited_desktop": "13190258141285793"
+               },
+               "name": "Snailclimb/Python: Python学习第三方库案例总结",
+               "type": "url",
+               "url": "https://github.com/Snailclimb/Python"
+            }, {
+               "date_added": "13189611569160693",
+               "id": "104",
+               "meta_info": {
+                  "last_visited_desktop": "13190129812073464"
+               },
+               "name": "data_analysis/homework/Stic at master · north-jewel/data_analysis",
+               "type": "url",
+               "url": "https://github.com/north-jewel/data_analysis/tree/master/homework/Stic"
+            }, {
+               "date_added": "13190191877945059",
+               "id": "106",
+               "meta_info": {
+                  "last_visited_desktop": "13190258115016251"
+               },
+               "name": "VisuAlgo - 数据结构和算法动态可视化 (Chinese)",
+               "type": "url",
+               "url": "https://visualgo.net/zh"
+            }, {
+               "date_added": "13190299194718960",
+               "id": "108",
+               "meta_info": {
+                  "last_visited_desktop": "13190299194719116"
+               },
+               "name": "官方seaborn教程 - seaborn 0.9.0文档",
+               "type": "url",
+               "url": "http://seaborn.pydata.org/tutorial.html#tutorial"
+            } ],
+            "date_added": "13182480506686470",
+            "date_modified": "13190299194718960",
+            "id": "54",
+            "name": "数据分析",
+            "type": "folder"
+         }, {
+            "children": [ {
+               "date_added": "13182661800509107",
+               "id": "61",
+               "meta_info": {
+                  "last_visited_desktop": "13190009383584600"
+               },
+               "name": "喜马拉雅FM-国内专业音频分享平台,随时随地,听我想听！",
+               "type": "url",
+               "url": "https://www.ximalaya.com/my/subscribed/"
+            }, {
+               "date_added": "13182662158789000",
+               "id": "63",
+               "meta_info": {
+                  "last_visited_desktop": "13190009404493080"
+               },
+               "name": "QQ音乐-千万正版音乐海量无损曲库新歌热歌天天畅听的高品质音乐平台！",
+               "type": "url",
+               "url": "https://y.qq.com/"
+            }, {
+               "date_added": "13184813215388779",
+               "id": "79",
+               "meta_info": {
+                  "last_visited_desktop": "13184813215406230"
+               },
+               "name": "绕口令（民间语言游戏）_百度百科",
+               "type": "url",
+               "url": "https://baike.baidu.com/item/%E7%BB%95%E5%8F%A3%E4%BB%A4/1403?fr=aladdin"
+            } ],
+            "date_added": "13182661820341275",
+            "date_modified": "13185337148193114",
+            "id": "62",
+            "name": "听，欣赏",
+            "type": "folder"
+         } ],
+         "date_added": "13178509438752678",
+         "date_modified": "13181381974549932",
+         "id": "1",
+         "name": "书签栏",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13178509438752696",
+         "date_modified": "0",
+         "id": "2",
+         "name": "其他书签",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13178509438752698",
+         "date_modified": "0",
+         "id": "3",
+         "name": "移动设备书签",
+         "type": "folder"
+      }
+   },
+   "version": 1
+}

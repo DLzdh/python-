@@ -1,0 +1,316 @@
+编译安装MySQL
+配置编译环境
+MySQL5.5及以上版本都开始用cmake方式进行配置编译。（MySQL5.0,5.1 均使用configure进行配置。）所以需要先安装好cmake
+
+方法一：
+
+yum -y install make gcc-c++ cmake bison-devel ncurses-devel
+ 
+
+方法二：
+
+CentOS5.5的yum没有cmake，所以可以选择编译安装cmake。
+
+安装编译源码所需的工具和库
+
+yum install gcc gcc-c++ ncurses-devel perl 
+ 
+
+安装cmake，从 www.cmake.org 下载源码并编译安装
+
+wget http://www.cmake.org/files/v2.8/cmake-2.8.10.2.tar.gz  
+tar -xzvf cmake-2.8.10.2.tar.gz
+cd cmake-2.8.10.2  
+./bootstrap ; make ; make install
+ 
+
+下载MySQL源码包后开始编译
+
+tar -zxf mysql-5.6.23.tar.gz
+cd mysql-5.6.23
+ 
+
+ 
+
+ 
+
+一些准备工作
+设置MySQL用户和组
+
+新增mysql用户组
+
+groupadd mysql
+ 
+
+新增mysql用户
+
+useradd -r -g mysql mysql
+ 
+
+新建MySQL所需要的目录
+
+新建mysql安装目录
+
+mkdir -p /usr/local/mysql
+ 
+
+新建mysql数据库数据文件目录
+
+mkdir -p /data/mysqldb
+ 
+
+ 
+
+ 
+
+编译安装
+CMake执行脚本为：
+
+复制代码
+cmake \
+-DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
+-DMYSQL_UNIX_ADDR=/usr/local/mysql/mysql.sock \
+-DDEFAULT_CHARSET=utf8 \
+-DDEFAULT_COLLATION=utf8_general_ci \
+-DWITH_INNOBASE_STORAGE_ENGINE=1 \
+-DWITH_ARCHIVE_STORAGE_ENGINE=1 \
+-DWITH_BLACKHOLE_STORAGE_ENGINE=1 \
+-DMYSQL_DATADIR=/data/mysqldb \
+-DMYSQL_TCP_PORT=3306 \
+-DENABLE_DOWNLOADS=1
+复制代码
+说明：
+
+网上有些文章中给出的cmake命令如下：
+
+复制代码
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
+-DMYSQL_UNIX_ADDR=/data/mysql/mysql.sock \
+-DDEFAULT_CHARSET=utf8 \
+-DDEFAULT_COLLATION=utf8_general_ci \
+-DWITH_EXTRA_CHARSETS:STRING=utf8,gbk \
+-DWITH_MYISAM_STORAGE_ENGINE=1 \
+-DWITH_INNOBASE_STORAGE_ENGINE=1 \
+-DWITH_MEMORY_STORAGE_ENGINE=1 \
+-DWITH_READLINE=1 \
+-DENABLED_LOCAL_INFILE=1 \
+-DMYSQL_DATADIR=/data/mysql \
+-DMYSQL_USER=mysql \
+-DMYSQL_TCP_PORT=3306
+复制代码
+ 
+
+编译后警告显示：
+
+wps158E.tmp
+
+即MYSQL_USER等模块式不可用的。
+
+此时，若需要重新配置，请删除CMakeCache.txt文件：
+
+rm CMakeCache.txt
+ 
+
+去掉MYSQL_USER等不可被用的选项后，再重新编译即可。
+
+复制代码
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
+-DMYSQL_UNIX_ADDR=/data/mysql/mysql.sock \
+-DDEFAULT_CHARSET=utf8 \
+-DDEFAULT_COLLATION=utf8_general_ci \
+-DWITH_EXTRA_CHARSETS:STRING=utf8,gbk \
+-DWITH_MYISAM_STORAGE_ENGINE=1 \
+-DWITH_INNOBASE_STORAGE_ENGINE=1 \
+-DENABLED_LOCAL_INFILE=1 \
+-DMYSQL_DATADIR=/data/mysql \
+-DMYSQL_TCP_PORT=3306
+复制代码
+ 
+
+ 
+
+编译 & 安装
+make
+make install
+这两步都需要很长时间，请耐心等待。
+
+ 
+修改mysql目录所有者和组
+修改mysql安装目录
+
+cd /usr/local/mysql
+chown -R mysql:mysql .
+ 
+
+修改mysql数据库文件目录
+
+cd /data/mysqldb
+chown -R mysql:mysql .
+ 
+
+说明：
+
+chown 最后跟文件名。此处使用"."，表示当前目录。
+
+ 
+
+ 
+
+启动MySQL
+初始化mysql数据库
+cd /usr/local/mysql
+scripts/mysql_install_db --user=mysql --datadir=/data/mysqldb
+wps159F.tmp
+
+...... ......
+
+wps15A0.tmp
+
+说明：
+
+从打印日志可以看出，mysql_install_db命令的作用是生成MySQL系统表。并且最后在mysql目录下生成一个my.cnf文件。
+
+--user=mysql 作用是指定运行mysqld进程的用户名。设置这个用户以后，所有通过mysqld进程创建的文件（如日志等）都会属于这个用户。
+
+wps15A1.tmp
+
+ 
+
+ 
+
+ 
+
+mysql配置文件
+cp /usr/local/mysql/support-files/my-default.cnf /etc/my.cnf 
+注：如果/etc/my.cnf文件存在，则覆盖。
+
+关于MySQL配置文件存在多个访问位置。MySQL会以此访问，后访问到的配置会覆盖先前的配置。
+
+MySQL访问配置文件的访问路径与访问顺序如下：
+
+wps15D1.tmp
+
+ 
+
+配置MySQL
+
+复制代码
+[client] 
+#password       = your_password 
+port            = 3306 
+socket          = /data/mysql/mysql.sock 
+default-character-set=utf8 
+# Here follows entries for some specific programs
+
+# The MySQL server 
+[mysqld] 
+port            = 3306 
+character_set_server=utf8 
+basedir=/data/mysql 
+datadir=/data/mysql/data 
+socket          = /data/mysql/mysql.sock 
+skip-external-locking 
+key_buffer_size = 16M 
+max_allowed_packet = 1M 
+table_open_cache = 64 
+sort_buffer_size = 512K 
+net_buffer_length = 8K 
+read_buffer_size = 256K 
+read_rnd_buffer_size = 512K 
+myisam_sort_buffer_size = 8M
+复制代码
+ 
+
+ 
+
+将MySQL执行命令添加入PATH
+vim /etc/profile
+ 
+
+在文件的末尾添加内容：
+
+PATH=$PATH:/usr/local/mysql/bin
+export PATH
+ 
+
+保持退出后，执行：
+
+source /etc/profile
+ 
+
+ 
+
+将MySQL设置为系统服务并启动服务
+cp support-files/mysql.server /etc/init.d/mysqld
+ 
+
+即，MySQL可以以如下形式启动：
+
+service mysqld start
+ 
+
+如果报错 "Starting MySQL. ERROR! The server quit without updating PID file (/data/mysql/rhelubuntu.com.pid). " 则修改
+
+vim  /etc/init.d/mysqld
+修改basedir=/usr/local/mysql             -----mysql安装位置
+
+修改datadir=/var/data/mysqldata          -----mysql数据文件存放位置
+
+ 一般修改好这个再重新启动mysql应该不会报错了。
+
+ 
+
+检查MySQL是否已经启动：
+
+netstat -tulnp | grep 3306
+ 
+
+ 
+
+配置用户
+使用MySQL客户端连接MySQL服务器
+
+mysql -u root -p
+初始密码为空，如果能登陆上，则安装成功。
+
+ 
+
+设置mysql管理员密码
+
+mysqladmin -u root password "123456";
+则123456即为新密码。
+
+ 
+
+设置mysql 远程登录
+
+grant all on *.* to root@'%';
+flush privileges;
+更多配置，略。
+
+ 
+
+配置防火墙
+防火墙的3306端口默认没有开启，若要远程访问，需要开启这个端口
+
+打开/etc/sysconfig/iptables
+
+在"-A INPUT –m state --state NEW –m tcp –p –dport 22 –j ACCEPT"，下添加：
+
+-A INPUT -m state --state NEW -m tcp -p -dport 3306 -j ACCEPT
+ 
+
+然后保存，并关闭该文件，在终端内运行下面的命令，刷新防火墙配置：
+
+service iptables restart
+ 
+
+ 
+
+CentOS 7中默认使用Firewalld做防火墙，所以修改iptables后，在重启系统后，根本不管用。
+
+Firewalld中添加端口方法如下：
+
+firewall-cmd --zone=public --add-port=3306/tcp --permanent
+
+firewall-cmd --reload

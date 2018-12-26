@@ -1,0 +1,74 @@
+                          mysql安装流程
+
+
+
+1. 下载mysql的repo源
+
+	$ wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm
+
+2. 安装mysql-community-release-el7-5.noarch.rpm包
+
+	$rpm -ivh mysql-community-release-el7-5.noarch.rpm
+
+3. 安装mysql
+
+	$yum install mysql-server
+
+4. 授权用户可以使用mysql
+
+	$  chown -R root:root  /var/lib/mysql
+
+5. 然后，重启服务：
+
+	$ service mysqld restart
+
+
+6. 接下来登录重置密码：
+
+	$ mysql -u root
+	mysql > use mysql;
+	mysql > update user set password=password('123456') where 	user='root';
+	mysql > grant all privileges on *.* to 'root'@'%' identified by '123456';  #设置远程登陆密码
+	mysql > flush privileges; #刷新当前配置
+
+7. 开放3306端口：
+
+	设置 iptables service
+
+		yum -y install iptables-services
+
+	如果要修改防火墙配置，如增加防火墙端口3306
+
+		vi /etc/sysconfig/iptables 
+
+	增加规则
+
+		-A INPUT -m state --state NEW -m tcp -p tcp --dport 3306 -j ACCEPT   #保存退出后
+
+8. 配置防火墙:
+
+	systemctl restart iptables.service #重启防火墙使配置生效
+
+	systemctl enable iptables.service #设置防火墙开机启动
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

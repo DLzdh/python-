@@ -1,0 +1,141 @@
+sudo yum -y groupinstall "Development tools"
+yum -y install iptables iptables-services
+
+
+[root@bogon ~]# rpm -qa pcre-devel #检测下有无
+pcre-devel-8.32-17.el7.x86_64
+
+
+tar -xzvf apr-1.6.3.tar.gz
+
+cd apr-1.6.3
+
+./configure --prefix=/usr/local/apr
+
+make && make install
+*****************************************
+报错：
+
+config.status: creating include/arch/unix/apr_private.h
+config.status: executing libtool commands
+rm: cannot remove 'libtoolT': No such file or directory
+config.status: executing default commands
+
+解决：
+
+这时直接打开 configure，把 $RM “$cfgfile” 那行删除掉，重新再运行 ./configure 就可以了。
+找到 vi configure  大概在文件的最后部分找到如下： 注释掉  $RM "$cfgfile"  ，或者直接删除也可以， 然后重新运行./configure即可。
+
+   cfgfile="${ofile}T"
+    trap "$RM \"$cfgfile\"; exit 1" 1 2 15
+    $RM "$cfgfile"
+
+    cat <<_LT_EOF >> "$cfgfile"
+#! $SHELL
+***********************************
+
+建议删掉重新解压一下
+
+cd ..
+rm -rf apr-1.6.3
+
+tar -xzvf apr-1.6.3.tar.gz
+
+cd apr-1.6.3
+
+vim configure  #用上面方法修改保存退出
+
+./configure --prefix=/usr/local/apr
+
+
+
+*****************
+config.status: creating test/internal/Makefile
+config.status: creating include/arch/unix/apr_private.h
+config.status: executing libtool commands
+config.status: executing default commands
+********************
+
+出现上述成功
+
+make && make install
+tar -xzvf apr-util-1.6.1.tar.gz
+cd apr-util-1.6.1
+
+./configure --prefix=/usr/local/apr-util --with-apr=/usr/local/apr/bin/apr-1-config
+
+make && make install
+
+tar -xzvf httpd-2.4.34.tar.gz 
+
+./configure --prefix=/usr/local/apache --sysconfdir=/etc/httpd24 --enable-so --enable-ssl --enable-cgi --enable-rewrite --with-zlib --with-pcre --with-apr=/usr/local/apr/bin/apr-1-config --with-apr-util=/usr/local/apr-util/bin/apu-1-config --enable-modules=most --enable-mpms-shared=all --with-mpm=event --enable-proxy --enable-proxy-fcgi
+
+make && make install
+
+/usr/local/apache/bin/apachectl start
+
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using fe80::880b:27a8:ff81:f430. Set the 'ServerName' directive globally to suppress this message
+
+服务没有名子
+vim /etc/httpd24/httpd.conf
+
+添加设置
+ServerName 192.168.68.131:80
+
+局域网可访问解决方法：
+ 1.修改配置文件httpd.conf
+
+<Directory "/var/www/cgi-bin">
+    AllowOverride None
+    Options None
+    Order allow,deny
+    Allow from all
+</Directory>
+
+ 2.添加端口映射，这点是CentOS系统的安全特性，也是其适用于服务器的原因吧。
+
+直接修改防火墙配置文件(/etc/sysconfig/iptables)
+                -A INPUT -p tcp -m state --state NEW -m tcp --dport 8080 -j ACCEPT
+                -A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
+
+
+/usr/local/apache/bin/apachectl start
+/usr/local/apache/bin/apachectl	stop
+/usr/local/apache/bin/apachectl restart
+
+
+
+tar -xzvf mod_wsgi-4.6.4.tar.gz
+cd mod_wsgi-4.6.4
+./configure --with-apxs=/usr/local/apache/bin/apxs --with-python=python3
+
+把mod_wsgi加载到apache服务，在配置文件下添加以下字
+LoadModule wsgi_module /usr/local/apache/modules/mod_wsgi.so
+
+LoadModule wsgi_module /usr/local/apache/modules/mod_wsgi.so
+WSGIScriptAlias / /var/www/mysite.com/mysite/wsgi.py
+#WSGIPythonHome /usr/local/python3  #如果是用virtualenv指定到虚拟环境下的python路径
+WSGIPythonPath /var/www/mysite.com  #django项目目录
+
+<Directory /var/www/mysite.com/mysite>
+<Files wsgi.py>
+Require all granted
+</Files>
+</Directory>
+
+
+/usr/local/apache/bin/apachectl restart
+
+
+
+
+
+
+
+
+
+
+
+
+
+
