@@ -1,0 +1,13 @@
+数据分析：
+pandas;numpy;matplotlib,seaborn;beautifulsoup4
+
+爬虫：
+requests
+
+游戏：
+pygame
+
+excel文件：
+openpyxl
+
+Django
